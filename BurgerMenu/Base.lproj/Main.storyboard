@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sQG-fi-Za4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="BbF-0k-pFj">
+            <objects>
+                <navigationController id="sQG-fi-Za4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XJC-NN-06S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vtm-aU-A2X" kind="relationship" relationship="rootViewController" id="4zR-fh-Lbt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKF-if-CVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="319"/>
+        </scene>
+        <!--Burger Menu View Controller-->
+        <scene sceneID="z5v-9w-00i">
+            <objects>
+                <viewController id="b5V-mT-IVT" customClass="BurgerMenuViewController" customModule="BurgerMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCI-dK-7xr"/>
+                        <viewControllerLayoutGuide type="bottom" id="TSw-P8-EOv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mbC-T3-bhg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFh-BI-4xD" userLabel="Menu View">
+                                <rect key="frame" x="0.0" y="20" width="300" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ddG-Qc-olx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbj-Zb-lhO">
+                                <rect key="frame" x="300" y="20" width="300" height="580"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="FhA-61-RL7" kind="unwind" unwindAction="unwindFromBurgerMenu:" id="KIP-fW-YPu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zbj-Zb-lhO" firstAttribute="top" secondItem="PCI-dK-7xr" secondAttribute="bottom" id="3VQ-q1-2nl"/>
+                            <constraint firstItem="TSw-P8-EOv" firstAttribute="top" secondItem="TFh-BI-4xD" secondAttribute="bottom" id="HTu-vK-gOJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Zbj-Zb-lhO" secondAttribute="trailing" id="Kdy-bR-p4D"/>
+                            <constraint firstItem="Zbj-Zb-lhO" firstAttribute="leading" secondItem="TFh-BI-4xD" secondAttribute="trailing" id="R6u-eY-pFj"/>
+                            <constraint firstItem="TFh-BI-4xD" firstAttribute="leading" secondItem="mbC-T3-bhg" secondAttribute="leading" id="dgu-ea-kHe"/>
+                            <constraint firstItem="TFh-BI-4xD" firstAttribute="top" secondItem="PCI-dK-7xr" secondAttribute="bottom" id="no4-nS-kbT"/>
+                            <constraint firstItem="TSw-P8-EOv" firstAttribute="top" secondItem="Zbj-Zb-lhO" secondAttribute="bottom" id="uUa-Bn-2eM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CpI-q1-TFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FhA-61-RL7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="319"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="tSP-5c-SUK">
+            <objects>
+                <viewController id="vtm-aU-A2X" customClass="StartViewController" customModule="BurgerMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qml-3n-OD8"/>
+                        <viewControllerLayoutGuide type="bottom" id="trt-js-apc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YSD-bW-yRb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhb-Y1-bFQ">
+                                <rect key="frame" x="20" y="208.5" width="560" height="183"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dhb-Y1-bFQ" firstAttribute="width" secondItem="YSD-bW-yRb" secondAttribute="width" constant="-40" id="1JY-bA-hZb"/>
+                            <constraint firstItem="Dhb-Y1-bFQ" firstAttribute="centerX" secondItem="YSD-bW-yRb" secondAttribute="centerX" id="6bz-Rj-XqV"/>
+                            <constraint firstItem="Dhb-Y1-bFQ" firstAttribute="centerY" secondItem="YSD-bW-yRb" secondAttribute="centerY" id="o6V-OQ-4bU"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Njh-3i-aCu">
+                        <barButtonItem key="leftBarButtonItem" image="BurgerMenu" id="niF-h9-Qnn">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="b5V-mT-IVT" kind="presentation" identifier="ShowBurgerMenu" modalPresentationStyle="overCurrentContext" id="BPI-XS-pAq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pp-j4-YPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="319"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BurgerMenu" width="24" height="16"/>
+    </resources>
+</document>
